@@ -1,0 +1,275 @@
+/* ====================================
+   Page Base 
+   ==================================== */
+body {
+    background-color: var(--white);
+}
+
+/* ====================================
+   Hero Section Image
+   ==================================== */
+.herbal-hero-img {
+    margin-top: 10px;
+    border-radius: 25px; 
+}
+
+/* ====================================
+   Variant Cards Main Layout
+   ==================================== */
+.variants-section {
+    padding: 40px 5% 20px 5%;
+}
+
+.variant-card {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 25px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06); 
+    margin-bottom: 50px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0; 
+}
+
+/* Left Media & Nutrition Section */
+.variant-media {
+    flex: 1;
+    padding: 40px;
+    background-color: #faf9f6; 
+    border-right: 1px solid #f0f0f0; /* Border is now on the right */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the image, button, and table neatly */
+}
+
+/* Right Info Section */
+.variant-info {
+    flex: 1.5;
+    padding: 40px 50px;
+    background-color: var(--white);
+}
+
+/* Image specifically sized to be slightly bigger with less margins */
+.variant-image {
+    width: 100%;
+    max-width: 420px; /* Increased from 380px */
+    margin: 0 0 20px 0; /* Tightened margins */
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.variant-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Custom backgrounds for variants */
+.sleep-bg { background-color: #f4f0e6; }
+.detox-bg { background-color: #ffffff; border: 1px solid #eee; }
+.immunity-bg { background-color: #e8f5e9; }
+
+/* ====================================
+   Typography & Details
+   ==================================== */
+.variant-info h3 {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.product-desc {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.caffeine-free {
+    font-size: 15px;
+    font-weight: 700;
+    color: #8b5a33; 
+    margin-bottom: 25px;
+}
+
+.pricing-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.current-price {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--border-brown);
+}
+
+.old-price {
+    font-size: 20px;
+    color: #999;
+    text-decoration: line-through;
+    font-weight: 600;
+}
+
+.box-info {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.order-btn {
+    padding: 12px 40px;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ====================================
+   Features Grid
+   ==================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.feature {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* ====================================
+   Card Accordions
+   ==================================== */
+.accordion-container {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.accordion {
+    background-color: transparent;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 18px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion:hover, .accordion.active {
+    color: var(--primary-green);
+}
+
+.panel {
+    padding: 0;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel p {
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ====================================
+   Lab Test Button & Nutrition Table
+   ==================================== */
+.btn-lab-test {
+    background-color: transparent;
+    color: var(--border-brown);
+    border: 2px solid var(--border-brown);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px; /* Matches the image max-width */
+    margin-bottom: 30px; /* Space between button and table */
+    transition: 0.3s ease;
+}
+
+.btn-lab-test:hover {
+    background-color: var(--border-brown);
+    color: var(--white);
+}
+
+.nutrition-table-container {
+    width: 100%;
+    max-width: 420px; /* Matches the image max-width */
+    text-align: left;
+}
+
+.nutrition-table-container h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.nutrition-table-container h4 span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #666;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+}
+
+.nutrition-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #333;
+}
+
+.nutrition-table tr:last-child td {
+    border-bottom: none;
+}
+
+.nutrition-table td:nth-child(2) {
+    font-weight: 800;
+    text-align: right;
+    color: var(--primary-green);
+}

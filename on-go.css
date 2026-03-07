@@ -1,0 +1,245 @@
+/* ====================================
+   Page Base (Override to match PDF)
+   ==================================== */
+body {
+    background-color: var(--white); /* Changes background from cream to white to match PDF */
+}
+
+/* ====================================
+   Hero Section Image
+   ==================================== */
+.ongo-hero-img {
+    margin-top: 10px;
+    border-radius: 25px; /* Keeps the slightly rounded corners but removes the border */
+}
+
+/* ====================================
+   Variant Cards
+   ==================================== */
+.variants-section {
+    padding: 40px 5% 20px 5%;
+}
+
+.variant-card {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 25px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06); 
+    margin-bottom: 50px;
+    overflow: hidden;
+    border: 1px solid #f0f0f0; /* Subtle line to separate card from white background */
+}
+
+.variant-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.pineapple-bg { background-color: #fcf6da; }
+.guava-bg { background-color: #fae8e8; }
+.lemon-bg { background-color: #fdfae5; }
+
+.variant-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.variant-details {
+    flex: 1.5;
+    padding: 40px 50px;
+    background-color: var(--white);
+}
+
+.variant-details h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.variant-details h3 span {
+    color: var(--primary-green);
+    font-size: 22px;
+}
+
+.variant-details .price {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--border-brown);
+    margin-bottom: 5px;
+}
+
+.variant-details .box-info {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.order-btn {
+    padding: 12px 40px;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* ====================================
+   Features Grid
+   ==================================== */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.feature {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary-green);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* ====================================
+   Nutrition Table & Lab Test Button
+   ==================================== */
+.nutrition-table-container h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.nutrition-table-container h4 span {
+    font-weight: 500;
+    font-size: 15px;
+    color: #666;
+}
+
+/* Wrapper to align table left and button right */
+.table-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nutrition-table {
+    flex: 1; /* Table takes up remaining space */
+    max-width: 400px;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.nutrition-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    color: #333;
+}
+
+.nutrition-table tr:last-child td {
+    border-bottom: none;
+}
+
+.nutrition-table td:nth-child(2) {
+    font-weight: 800;
+    text-align: right;
+    color: var(--primary-green);
+}
+
+/* Lab Test Button Styles */
+.btn-lab-test {
+    background-color: transparent;
+    color: var(--border-brown);
+    border: 2px solid var(--border-brown);
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-lab-test:hover {
+    background-color: var(--border-brown);
+    color: var(--white);
+}
+
+/* ====================================
+   Accordion Section
+   ==================================== */
+.accordion-section {
+    padding: 20px 5%;
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+}
+
+.accordion {
+    background-color: #f9f9f9;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 22px 30px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--white);
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.accordion:last-of-type {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: none;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #e8e4d9;
+    color: var(--primary-green);
+}
+
+.panel {
+    padding: 0 30px;
+    background-color: #f9f9f9;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel p {
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    line-height: 1.6;
+}
