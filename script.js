@@ -3,23 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 1. WhatsApp Redirection Logic
     // ==========================================
-    const whatsappNumber = "918249706818";
     
-    const talkMessage = encodeURIComponent("Hi, I want to talk with you regarding nutrition.");
+    // Global support number for floating icon / header button
+    const globalWhatsapp = "918249706818";
+    
+    const talkMessage = encodeURIComponent("Hi, I want to talk with you regarding nutrition consultation from VedMitti");
 
+    // Header "Talk to Nutritionist" Button
     const nutritionistBtns = document.querySelectorAll('.nutritionist-btn');
     nutritionistBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            window.open(`https://wa.me/${whatsappNumber}?text=${talkMessage}`, '_blank');
+            window.open(`https://wa.me/${globalWhatsapp}?text=${talkMessage}`, '_blank');
         });
     });
 
+    // Experts Panel "Chat Now" Buttons (Uses the specific doctor's number)
     const chatButtons = document.querySelectorAll('.btn-chat');
     chatButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            window.open(`https://wa.me/${whatsappNumber}?text=${talkMessage}`, '_blank');
+            // Get the specific phone number from the HTML attribute
+            const doctorPhone = e.target.getAttribute('data-phone');
+            
+            // If they have a phone number attached, use it. If not, fallback to global.
+            const targetPhone = doctorPhone ? doctorPhone : globalWhatsapp;
+            
+            window.open(`https://wa.me/${targetPhone}?text=${talkMessage}`, '_blank');
         });
     });
 
