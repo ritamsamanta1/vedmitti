@@ -328,7 +328,7 @@ header {
 }
 
 .section-title {
-    font-size: 40px; 
+    font-size: 35px; 
     font-weight: 800;
     color: #1a4331;
     line-height: 1.2;
@@ -537,4 +537,5 @@ footer {
     body {
         zoom: calc(100vw / 1200); 
     }
+
 }
