@@ -116,7 +116,7 @@ header {
 .hero-overlay-buttons {
     position: absolute;
     bottom: 10%; /* You can adjust this to move them UP or DOWN */
-    left: 4%;    /* CHANGED: This pushes the buttons to the LEFT side */
+    left: 3%;    /* CHANGED: This pushes the buttons to the LEFT side */
     display: flex;
     gap: 20px;
     z-index: 10;
@@ -128,7 +128,7 @@ header {
     color: #ffffff;
     padding: 16px 40px;
     border-radius: 40px;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3);
@@ -917,3 +917,4 @@ footer {
         zoom: calc(100vw / 1200); 
     }
 }
+
