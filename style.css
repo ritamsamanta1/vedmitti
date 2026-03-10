@@ -25,6 +25,9 @@ body {
     min-width: 1200px; 
     overflow-x: hidden;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* ==================================== Header ==================================== */
 header {
@@ -93,36 +96,52 @@ header {
     text-align: center;
 }
 
+.hero-image-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: inline-block; 
+    width: 100%;
+}
+
 .hero-banner-img {
     width: 100%;
-    max-width: 1400px;
     height: auto;
     display: block;
-    margin: 0 auto;
     object-fit: cover; 
     border-radius: 25px;
 }
-/* Global utility class for centering */
-.centered-text {
-    text-align: center;
+
+/* Positions the buttons over the image */
+.hero-overlay-buttons {
+    position: absolute;
+    bottom: 10%; /* You can adjust this to move them UP or DOWN */
+    left: 4%;    /* CHANGED: This pushes the buttons to the LEFT side */
+    display: flex;
+    gap: 20px;
+    z-index: 10;
 }
 
-/* Sage Green Headings (Match Provided Image style) */
-.sage-heading {
-    font-size: 40px;
-    font-weight: 800;
-    color: var(--primary-green);
-    margin-bottom: 30px;
-}
-
-.sage-heading-sm {
+/* Green overlay buttons */
+.btn-hero {
+    background-color: #053827; /* Matches Footer Green */
+    color: #ffffff;
+    padding: 16px 40px;
+    border-radius: 40px;
     font-size: 32px;
     font-weight: 700;
-    color: var(--sage-green); /* slightly lighter green for contrast */
-    margin-top: 40px;
-    margin-bottom: 20px;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    transition: 0.3s ease;
+    border: 3px solid transparent;
 }
 
+.btn-hero:hover {
+    background-color: #ffffff;
+    color: #053827;
+    border: 3px solid #053827;
+    transform: translateY(-5px);
+}
 /* ==================================== 
    NEW: Sub Hero Introduction Section (Why VedMitti)
    ==================================== */
