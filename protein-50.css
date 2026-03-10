@@ -220,7 +220,7 @@ header {
     color: #ffffff;
     font-size: 34px; 
     font-weight: 700;
-    padding: 22px 0; 
+    padding: 12px 0; 
     width: 100%; 
     border-radius: 50px;
     border: none;
@@ -536,4 +536,5 @@ footer {
     body {
         zoom: calc(100vw / 1200); 
     }
+
 }
