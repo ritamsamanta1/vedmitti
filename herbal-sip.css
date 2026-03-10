@@ -221,7 +221,7 @@ header {
     color: #ffffff;
     font-size: 34px; /* Increased from 28px */
     font-weight: 700;
-    padding: 22px 0; /* Made the button taller to match the huge text */
+    padding: 12px 0; /* Made the button taller to match the huge text */
     width: 100%; 
     border-radius: 50px; /* Kept beautifully rounded */
     border: none;
@@ -535,4 +535,5 @@ footer {
     body {
         zoom: calc(100vw / 1200); 
     }
+
 }
