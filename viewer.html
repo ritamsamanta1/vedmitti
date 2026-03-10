@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Test Report | VedMitti</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevents double scrollbars */
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f0e6;
+        }
+        /* The Top Bar for the Back Button */
+        .top-bar {
+            background-color: #2b3a28; /* VedMitti Green */
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            height: 60px;
+            box-sizing: border-box;
+        }
+        .btn-back {
+            background-color: #e7b653; /* VedMitti Gold */
+            color: #2b3a28;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-back:hover {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+        }
+        .header-title {
+            color: white;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        /* PDF Iframe */
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 60px); /* Fills the rest of the screen below the top bar */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <button onclick="window.history.back()" class="btn-back">⬅ Back to Products</button>
+        <span class="header-title">Lab Test Report</span>
+    </div>
+
+    <iframe id="pdf-frame" class="pdf-container" src=""></iframe>
+
+    <script>
+        // JavaScript to get the PDF filename from the URL link and load it
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfFile = urlParams.get('file');
+
+        if (pdfFile) {
+            document.getElementById('pdf-frame').src = pdfFile;
+        } else {
+            document.getElementById('pdf-frame').outerHTML = "<h2 style='text-align:center; padding: 50px;'>Error: No PDF file specified.</h2>";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,900 @@
+/* Color Palette & Base Variables */
+:root {
+    --bg-cream: #f4f0e6;
+    --text-dark: #111111;
+    --primary-green: #2b3a28;
+    --accent-gold: #e7b653;
+    --badge-bg: #ced4ca; 
+    --border-brown: #8b5a33;
+    --card-bg: #fdfdf8; 
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    /* Forces the layout to stay in its desktop proportions */
+    min-width: 1200px; 
+    overflow-x: hidden;
+}
+
+/* ==================================== Header ==================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2%;
+    background-color: #053827;
+}
+
+.logo {
+    background-color: var(--white);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.brand-logo {
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
+.search-bar input {
+    padding: 12px 25px;
+    width: 450px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f1f0e8;
+    outline: none;
+    font-size: 18px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-placeholder {
+    color: var(--white);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-gold);
+    color: var(--primary-green);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 25px;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+/* ==================================== Full Width Hero Image Section ==================================== */
+.full-width-hero {
+    width: 100%;
+    padding: 20px 2% 0 2%; 
+    text-align: center;
+}
+
+.hero-banner-img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; 
+    border-radius: 25px;
+}
+/* Global utility class for centering */
+.centered-text {
+    text-align: center;
+}
+
+/* Sage Green Headings (Match Provided Image style) */
+.sage-heading {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: 30px;
+}
+
+.sage-heading-sm {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--sage-green); /* slightly lighter green for contrast */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* ==================================== 
+   NEW: Sub Hero Introduction Section (Why VedMitti)
+   ==================================== */
+.sub-hero-intro-section {
+    padding: 40px 2% 20px 2%; 
+    background-color: var(--bg-cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sage-heading {
+    margin-bottom: 75px; /* Leaves room for the overlapping circles */
+    letter-spacing: -0.5px;
+}
+
+/* Headings styles extracted from HTML */
+.heading-why {
+    color: #111111;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+/* Replaced Inline CSS for the Headings */
+.heading-why {
+    color: #111111;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+/* New CSS to align the text and the image perfectly in a row */
+.sage-heading.inline-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically aligns the text and the logo */
+    gap: 12px; /* The space between the word "why" and the logo */
+}
+
+/* Makes the logo behave like text without borders or backgrounds */
+.heading-logo {
+    height: 100px; /* Adjust this up or down to match the height of your text */
+    width: auto;
+    object-fit: contain;
+    border: none;
+    background: transparent;
+    display: block;
+}
+
+/* The light green rounded background box */
+.intro-circles-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #dbe4dc; /* Matches the exact light green from your image */
+    border-radius: 40px; /* Pill shape */
+    
+    /* 1. Exactly matches the width of the Hero Image! */
+    width: 100%; 
+    max-width: 1400px; /* Matches the hero-banner-img max-width */
+    margin: 0; /* Removed the side margins so it aligns perfectly */
+    
+    /* 2. Keeps the reduced box height */
+    padding: 0 20px 15px 20px; 
+}
+/* The light green rounded background box */
+.intro-circles-flex {
+    display: flex;
+    justify-content: space-evenly; /* Spaces the 3 items perfectly */
+    align-items: flex-start;
+    background-color: #dbe4dc; /* Matches the exact light green */
+    border-radius: 40px; /* Pill shape */
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px 30px 20px; /* Added a bit more bottom padding */
+    margin: 0 auto;
+}
+
+.intro-circle-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the circle and text horizontally */
+    text-align: center; /* Forces the text to be centered */
+    width: 30%; 
+}
+
+/* The icon circle popping out of the top */
+.circle-img-wrapper {
+    width: 110px; /* Slightly smaller to match your image */
+    height: 110px;
+    background-color: var(--bg-cream); /* Matches page background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -55px; /* Pulls it exactly halfway out (half of 110px) */
+    margin-bottom: 5px;
+    border: 2px solid #3b6b36; /* Made border slightly thinner to match image */
+}
+
+.circle-img-wrapper img {
+    width: 111%; 
+    height: 111%;
+    object-fit: contain;
+}
+
+.circle-text {
+    color: #111111;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center; /* Ensures the lines of text center perfectly under each other */
+}
+/* Subtitle styles extracted from HTML */
+.pure-nutrition-heading {
+    color: #111111;
+    font-weight: 700;
+    font-size: 42px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Green Divider Line extracted from HTML */
+.green-divider {
+    width: 250px;
+    height: 2px;
+    background-color: #3b6b36;
+    margin: 0 auto 10px auto;
+}
+
+/* ==================================== Badges Pill Section ==================================== */
+.badges-pill-section {
+    padding: 30px 2%;
+    background-color: var(--bg-cream);
+    display: flex;
+    justify-content: center;
+}
+
+.badges-pill {
+    background-color: var(--badge-bg); 
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.badge-item {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+/* ==================================== Products Section ==================================== */
+.products-section {
+    padding: 20px 2%;
+    background-color: #f3f4ea; 
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h3 {
+    font-size: 50px;
+    font-weight: 700; 
+    color: #053827; 
+    margin-bottom: 5px;
+    margin-left: 16px;
+}
+
+.section-header ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: #7a2f00;
+    font-size: 35px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+.section-header ul li {
+    margin-bottom: 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #f6efe6; 
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border: 1px solid #e8e0d5; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.product-card .img-container {
+    background-color: #1a1a1a; 
+    padding: 0; 
+    border-radius: 20px 20px 20px 20px; 
+    margin: 15px 15px 0 15px; 
+    aspect-ratio: 1 / 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center; /* CHANGED: Makes all text center-aligned */
+}
+
+.card-content h4 {
+    font-size: 40px; /* Kept exactly the same */
+    font-weight: 800;
+    color: #053827; 
+    margin-bottom: 2px;
+}
+
+.card-content p {
+    font-size: 35px; /* Kept exactly the same */
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #7a2f00; 
+}
+
+.card-action-row {
+    display: flex;
+    justify-content: center; /* CHANGED: Moves the button to the middle */
+    align-items: flex-end; 
+    margin-top: auto; 
+}
+
+.card-action-row .instruction {
+    font-weight: 700;
+    color: #a06b4d; 
+    font-size: 28px; /* Kept exactly the same */
+    line-height: 1.3;
+}
+
+.btn-shop-now {
+    background-color: #7a2f00; 
+    color: #ffffff;
+    padding: 12px 60px; /* CHANGED: Increased padding to make the button much longer */
+    border: none;
+    border-radius: 40px; /* Adjusted slightly to keep the rounded pill shape */
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 28px; /* Kept exactly the same */
+    transition: 0.3s ease;
+    white-space: nowrap; 
+}
+
+.btn-shop-now:hover {
+    background-color: #654321; 
+}
+
+/* ==================================== Rituals (Recipe to Use) Section ==================================== */
+.rituals-section {
+    padding: 20px 2% 60px;
+    background-color: var(--bg-cream);
+}
+
+.rituals-section h3 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #053827; 
+    margin-bottom: 20px;
+}
+
+.rituals-banner {
+    background-color: #b7c0b4; 
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.rituals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.ritual-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.ritual-card:hover {
+    transform: translateY(-3px);
+}
+
+.ritual-text {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    padding-right: 15px;
+}
+
+/* Updated for Video/Play Button centering */
+.ritual-video-box {
+    width: 310px;  
+    height: 220px; 
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--bg-cream); 
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.ritual-video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5px;
+    outline: none; 
+}
+/* Mini Play Button Overlay for Rituals */
+.play-overlay-sm {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 2;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.ritual-video-box:hover .play-overlay-sm {
+    transform: scale(1.1);
+}
+
+/* ==================================== Connect to Our Wellness Experts ==================================== */
+.connect-experts-section {
+    padding: 20px 2%;
+    background-color: var(--bg-cream);
+}
+
+.connect-experts-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e8e1; 
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.connect-info {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.connect-info h3 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #053827;
+    margin-bottom: 20px;
+}
+
+.connect-info ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 38px;
+    font-weight: 500;
+    color: #7a2f00;
+}
+
+.connect-info ul li {
+    margin-bottom: 15px;
+}
+
+.connect-illustration {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.connect-illustration img {
+    width: 450px;
+    height: 400px;
+    max-width: 750px;
+    /* 50px ensures the image itself gets a 25px curve inside the 25px border */
+    border-radius: 50px; 
+    object-fit: cover;
+    border: 25px solid #ced4ca;
+}
+
+/* ==================================== Panel of Wellness Experts ==================================== */
+.experts-panel-section {
+    padding: 20px 2% 20px 2%;
+    background-color: var(--bg-cream); 
+}
+
+.section-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: #053827; 
+    margin-bottom: 25px;
+}
+
+.experts-panel-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.expert-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-top: -20px;
+    flex: 1; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.expert-img-wrapper {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    align-self: center; 
+}
+
+.expert-img-wrapper img {
+    width: 300px;
+    height: 400px;
+    border-radius: 0%;
+    object-fit: cover;
+}
+
+.status.busy {
+    position: absolute;
+    bottom: 5px;
+    right: -10px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.expert-details {
+    text-align: left;
+    width: 100%;
+}
+
+.expert-details h4 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #053827;
+    margin-bottom: 5px;
+}
+
+.expert-details .stars {
+    color: #e7b653; 
+    font-size: 24px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.expert-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.expert-bottom-row p {
+    font-size: 25px;
+    color: #7a2f00;
+    line-height: 1.4;
+    font-weight: 500;
+    margin: 0;
+}
+
+.btn-chat {
+    background-color: var(--primary-green);
+    color: var(--white);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px; 
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.btn-chat:hover {
+    background-color: #06402B;
+}
+
+/* ==================================== Authentic Sourcing Section ==================================== */
+.sourcing-section {
+    padding: 20px 2% 15px 2%;
+    background-color: var(--bg-cream);
+}
+
+.sourcing-section h3.section-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: #053827; 
+    margin-bottom: 25px;
+}
+
+.sourcing-box {
+    background-color: var(--card-bg);
+    border: 8px solid var(--border-brown); 
+    border-radius: 25px;
+    overflow: hidden; 
+    position: relative;
+    min-height: 350px; 
+    display: flex;
+    align-items: stretch;
+    width: 100%; 
+}
+
+/* --- The Auto Slider CSS --- */
+.scrolling-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite; 
+}
+
+.sourcing-box:hover .scrolling-track {
+    animation-play-state: paused;
+}
+
+.scrolling-track img {
+    height: 100%; 
+    width: 500px; 
+    object-fit: cover; 
+    border-right: 4px solid var(--white); 
+}
+
+@keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+/* ==================================== 
+   Feedback Section - Matched to Screenshot
+   ==================================== */
+.feedback-section {
+    padding: 0px 2% 20px 2%;
+    background-color: var(--bg-cream);
+}
+
+.feedback-section h3.section-title {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.feedback-frame {
+    background-color: var(--sage-green); /* Solid grey/green background from screenshot */
+    padding: 20px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.feedback-reels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Space between the cards */
+}
+
+.reel-video-card {
+    aspect-ratio: 9 / 16; /* Tall video format */
+    background-color: var(--bg-cream); /* Beige inside like screenshot */
+    border: 7px solid #8b4a2b; /* Thick brown border exactly matching screenshot */
+    border-radius: 20px; /* Highly rounded corners */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The video tag needs inner radius so it fits inside the thick border */
+.reel-video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Inner radius */
+    opacity: 0.95; 
+    transition: opacity 0.3s ease;
+    outline: none; 
+    background-color: var(--bg-cream); /* Fallback color before video loads */
+}
+
+.reel-video-card:hover video {
+    opacity: 1;
+}
+
+.play-overlay {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--primary-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 2;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.reel-video-card:hover .play-overlay {
+    transform: scale(1.1);
+}
+/* ==================================== Floating WhatsApp Button ==================================== */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; 
+    width: 80px;
+    height: 80px;
+    background-color: #25d366; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-whatsapp img {
+    width: 75px;
+    height: 75px;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.floating-whatsapp:focus {
+    outline: none;
+}
+
+/* ====================================
+   Footer & Developer Credit
+   ==================================== */
+footer {
+    padding: 60px 5% 30px 5%; 
+    background-color: #053827; /* Dark green background */
+    color: #ffffff; /* Base text color changed to white */
+}
+
+.footer-content {
+    margin-bottom: 40px;
+    text-align: center; 
+    width: 100%; /* Forces the text to use the full width */
+}
+
+.footer-content h3 {
+    color: #ffffff; /* White text for contrast */
+    margin-bottom: 20px;
+    font-size: 32px; /* Scaled up heading */
+    font-weight: 800;
+}
+
+.footer-content p {
+    color: #e8f5e9; /* Very soft light green/white for readability */
+    font-size: 24px; /* Big, readable text */
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+/* Developer Credit Styling */
+.developer-credit {
+    text-align: center;
+    font-size: 14px; /* Small, subtle font */
+    color: #a5d6a7; /* Muted green so it doesn't distract */
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed #2e604f; /* Subtle separating line */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px; /* Space between "Developed By -" and your name */
+}
+
+/* Flexbox to keep the logo and name perfectly aligned */
+.linkedin-link {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between the icon and your name */
+    transition: color 0.3s ease;
+}
+
+/* Sizing for the LinkedIn Logo */
+.linkedin-icon {
+    width: 16px; 
+    height: 16px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.linkedin-link:hover {
+    color: #4db6ac; /* Highlights nicely when hovered */
+    text-decoration: underline;
+}
+
+/* ==================================== 
+   MAGIC ZOOM FOR SMALL SCREENS 
+   Forces the exact desktop layout to shrink on smaller screens
+==================================== */
+@media screen and (max-width: 1200px) {
+    body {
+        /* This calculates exactly how much to shrink the 1200px layout to fit the current screen width */
+        zoom: calc(100vw / 1200); 
+    }
+}
